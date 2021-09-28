@@ -93,6 +93,16 @@ To access the main help page,
 
 (Note: In case this doesn't work, try regenerating the tags for help files by running `:helptags ALL`, ignoring any errors).
 
+## Todos
+
+```
+  [ ] C-style comments suport
+  [ ] Support all current features and keywords of Verona
+  [ ] Code folding support 
+  [ ] Better way of specifying the Verona executable(?)
+  [ ] Navigation support
+```
+
 # LICENCE
 
 See [LICENCE](LICENSE.md).
