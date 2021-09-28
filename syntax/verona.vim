@@ -28,7 +28,7 @@
 :syntax keyword veronaBoolean true false
 
 " exceptions
-:synax keyword veronaException try catch
+:syntax keyword veronaException try catch
 
 " operator functions
 :syntax keyword veronaOperatorFunction add
