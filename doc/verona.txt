@@ -1,0 +1,99 @@
+*verona.txt* Basic functionality for the Verona programming language
+
+            ____   ____                                 
+            \   \ /   /___________  ____   ____ _____   
+             \   Y   // __ \_  __ \/  _ \ /    \\__  \   ~
+              \     /\  ___/|  | \(  <_> )   |  \/ __ \_ ~
+               \___/  \___  >__|   \____/|___|  (____  / ~
+              
+            A barebones plugin for the Verona programming language. 
+            Syntax highlighting and running loaded scripts.
+
+
+===============================================================================
+CONTENTS                                                         *VeronaContents*
+
+  1. Usage...................................................|VeronaUsage|
+  2. Mappings................................................|VeronaMappings|
+  3. Ex Commands.............................................|VeronaExCommands|
+  4. Licence.................................................|VeronaLicence|
+  5. Contributing............................................|VeronaContributing|
+  6. Credits.................................................|VeronaCredits|
+
+===============================================================================
+Section 1: Usage                                             *VeronaUsage*
+
+This plugin provides basic syntax highlighting for Verona files (files that end in
+`.verona`). The specific colours will be based on your currently selected colour
+scheme.
+
+In addition, you can run the currently loaded Verona script in two ways:
+
+Normal mode~
+
+>
+  <LocalLeader>r
+>
+
+Ex command~
+
+You can also run the script in Ex mode by running:
+
+>
+  :VeronaRun
+>
+
+Options~
+
+You can control the behaviour of the plugin using the following options:
+
+`g:verona_on_windows`. This is turned off by default, and so the plugin assumes that
+you are on a non-Windows system. If you are on Windows, then set this option on
+by including the following line in your `vimrc` file:
+
+>
+  let g:verona_on_windows = 1
+<
+===============================================================================
+Section 2: Mappings                                          *VeronaMappings*
+
+`verona.vim` has only one mapping for now:
+
+>
+  :nnoremap <buffer><LocalLeader>r :call verona#running#VeronaCompileAndRunFile()<Cr>
+<
+
+This sets a buffer-local mapping using '<LocalLeader>' (run `:help
+maplocalleader` if you are not familiar with it).
+
+===============================================================================
+Section 2: Ex Commands                                       *VeronaExCommands*
+
+As mentioned in the |VeronaUsage| section, you can also execute the currently
+loaded script using the 'Ex' mode command, `:VeronaRun`, which is defined so:
+
+>
+  :command! VeronaRun :call verona#running#VeronaCompileAndRunFile()
+<
+
+===============================================================================
+Section 4: Licence                                           *VeronaLicence*
+
+This plugin is provided as-is under the terms of The Unlicense. Refer to the
+`LICENSE.md` file for more details.
+
+===============================================================================
+Section 5: Contributing                                      *VeronaContributing*
+
+All contributions are welcome (bug reports, feature requests, corrections and
+tweaks). 
+
+Please check the official repository for this plugin - 
+https://github.com/timmyjose-projects/verona.vim for this.
+
+
+===============================================================================
+Section 6: Credits                                           *VeronaCredits*
+
+This plugin was created by Timmy Jose <zoltan.jose@gmail.com>.
+
