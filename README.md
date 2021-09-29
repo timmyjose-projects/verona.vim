@@ -96,7 +96,7 @@ To access the main help page,
 ## Todos
 
 ```
-  [ ] C-style comments suport
+  [X] C-style comments suport
   [ ] Support all current features and keywords of Verona
   [ ] Code folding support 
   [ ] Better way of specifying the Verona executable(?)
