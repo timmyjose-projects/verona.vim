@@ -15,7 +15,6 @@ The plugin should work as-is with Vim/NeoVim's native plugin manager. For instan
 $ cd ~/.vim/pack/plugins/start && git clone https://github.com/timmyjose-projects/verona.vim
 
 ```
-
 should have the plugin up and running.
 
 ### Plug
@@ -25,7 +24,6 @@ Add the following line to your Vim/NeoVim configuration file's `Vim-Plug` plugin
 ```
 Plug 'timmyjose-projects/verona.vim'
 ```
-
 and then run `PlugInstall` or (`PlugUpdate` as the case may be).
 
 ### Vundle
@@ -45,33 +43,24 @@ other plugin:
 
 ```
 cd ~/.vim/bundle && git clone https://github.com/timmyjose-projects/verona.vim
-
 ```
-
-## Setting up the Verona executable
+### Setting up the Verona executable
 
 If you are on Windows, set the followin option on (in the `vimrc` file. This flag decides whether to use `veronac.exe` (on Windows) or `veronac` (on all other platforms). 
 This assumes that the executable is available in the `PATH`, regardless of the OS.
 
 ```
   :let g:verona_on_windows = 1 " if your OS is Windows
-```
-```
   :let g:verona_on_windows = 0 " if your OS is some other OS
 ```
-
 `:help VeronaUsage` for more details.
-
-
 ## Running Programs
 
 To run the currently loaded file:
 
 ```
 <LocalLeader>r
-
 ```
-
 The `LocalLeader` character is normally either `\` or `,`. Run `:help maplocalleader` for reference in case you are not familiar with `<LocalLeader>`). 
 Run `:help VeronaMappings` for more details.
 
@@ -84,9 +73,7 @@ To run the currently loaded file:
 ```
 :VeronaRun
 ```
-
 `:help VeronaExCommands` for more details.
-
 
 ## Help
 
@@ -94,8 +81,7 @@ To access the main help page,
 
    ```
    :help verona.txt
-
-   ```
+  ```
 
 (Note: In case this doesn't work, try regenerating the tags for help files by running `:helptags ALL`, ignoring any errors).
 
