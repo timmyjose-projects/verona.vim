@@ -1,8 +1,8 @@
-:if !exists("g:verona_on_windows")
-:  if get(g:, "on_windows", 0)
-:    let g:verona_executable = "veronac"
+:if !exists("g:verona_command")
+:  if get(g:, "verona_on_windows", 0)
+:    let g:verona_command = "veronac.exe --run"
 :  else
-:    let g:verona_executable = "veronac.exe"
+:    let g:verona_command = "veronac --run"
 :  endif
 :endif
 
