@@ -2,9 +2,13 @@
 " Language: Verona
 " Maintainer: Timmy Jose<zoltan.jose@gmail.com>
 
+" save current cpo configuration
 :if exists("b:current_syntax")
 :  finish
 :endif
+
+:let s:cpo_save = &cpo
+:set cpo&vim
 
 " keywords
 :syntax keyword veronaKeyword new create break continue yield cown return fun var let match in where static private builtin
@@ -19,7 +23,7 @@
 :syntax keyword veronaPreprocessorKeyword imports
 
 " builtin keywords
-:syntax keyword veronaBuiltinKeyword imm mut iso Self
+:syntax keyword veronaSpecialKeyword imm mut iso Self
 
 " number types
 :syntax match veronaNumericType "\v<[IU][1-9]\d*>"
@@ -46,7 +50,7 @@
 :syntax keyword veronaRepeat for while when 
 
 " numbers
-:syntax match veronaNumber "\v\-?\d+(\.\d+)?"
+:syntax match veronaNumber "\v\<\-?\d+(\.\d+)?\>"
 
 " todos
 :syntax keyword veronaTodo TODO FIXME contained
@@ -63,7 +67,7 @@
 :highlight link veronaTypedef Typedef
 :highlight link veronaStructure Structure
 :highlight link veronaPreprocessorKeyword Include
-:highlight link veronaBuiltinKeyword Keyword
+:highlight link veronaSpecialKeyword Special
 :highlight link veronaNumericType Type
 :highlight link veronaBoolean Boolean
 :highlight link veronaConstant Constant
@@ -79,3 +83,7 @@
 :highlight link veronaTodo Todo
 
 :let b:current_syntax = "verona"
+
+" reset the previous cpo configuration
+:let &cpo = s:cpo_save
+:unlet! s:cpo_save

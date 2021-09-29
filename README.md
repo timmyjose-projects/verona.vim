@@ -5,7 +5,7 @@ development, changes to the syntax as well as keywords et al are only to be expe
 
 This plugin is compatible with Vim's (and NeoVim's) native plugin manager, Pathogen, Vundle, Plug etc.
 
-# Installation and Usage
+## Installation and Usage
 
 ### Vanilla Vim/NeoVim
 
@@ -38,17 +38,6 @@ Plugin 'timmyjose-projects/verona.vim'
 
 and then run `PluginInstall` (or `PluginUpdate` as the case may be)
 
-### Options
-
-If you are on Windows, set the followin option on (in the `vimrc` file. This flag decides whether to use `veronac.exe` (on Windows) or `veronac` (on all other platforms). 
-This assumes that the executable is available in the `PATH`, regardless of the OS.
-
-```
-:let g:verona_on_windows = 1 " if your OS is Windows
-```
-
-`:help VeronaUsage` for more details.
-
 ### Pathogen
 
 This plugin is compatible with Pathogen as well. Clone the `verona.vim` project into `~/.vim/bundle` as for any
@@ -59,7 +48,22 @@ cd ~/.vim/bundle && git clone https://github.com/timmyjose-projects/verona.vim
 
 ```
 
-## Mappings
+## Setting up the Verona executable
+
+If you are on Windows, set the followin option on (in the `vimrc` file. This flag decides whether to use `veronac.exe` (on Windows) or `veronac` (on all other platforms). 
+This assumes that the executable is available in the `PATH`, regardless of the OS.
+
+```
+  :let g:verona_on_windows = 1 " if your OS is Windows
+```
+```
+  :let g:verona_on_windows = 0 " if your OS is some other OS
+```
+
+`:help VeronaUsage` for more details.
+
+
+## Running Programs
 
 To run the currently loaded file:
 
@@ -68,11 +72,12 @@ To run the currently loaded file:
 
 ```
 
-(Run `:help maplocalleader` for reference in case you are not familiar with `<LocalLeader>`). `:help VeronaMappings` for more details.
+The `LocalLeader` character is normally either `\` or `,`. Run `:help maplocalleader` for reference in case you are not familiar with `<LocalLeader>`). 
+Run `:help VeronaMappings` for more details.
 
 Note: This runs the program in interpreted mode (which seems to be the only mode supported as of today).
 
-## Ex commands
+### Using Ex commands
 
 To run the currently loaded file:
 
@@ -82,7 +87,8 @@ To run the currently loaded file:
 
 `:help VeronaExCommands` for more details.
 
-# Help
+
+## Help
 
 To access the main help page,
 
@@ -95,14 +101,22 @@ To access the main help page,
 
 ## Todos
 
-```
-  [X] C-style comments suport
-  [ ] Support all current features and keywords of Verona
-  [ ] Code folding support 
-  [ ] Better way of specifying the Verona executable(?)
-  [ ] Navigation support
-```
+- [x] C-style comments suport
+- [x] Support all current features and keywords of Verona
+- [ ] Better way of specifying the Verona executable
+- [ ] Code folding support 
+- [ ] Navigation support
 
-# LICENCE
+## Screenshots
+
+  Light mode: 
+
+  ![Light Mode screenshot](https://github.com/timmyjose-projects/screenshots/blob/71d1bf1b86d984cf73396bea3c3136a456888f9d/verona.vim/verona-vim-light-mode.png)
+
+  Dark mode:
+
+  ![Dark mode screenshot](https://github.com/timmyjose-projects/screenshots/blob/71d1bf1b86d984cf73396bea3c3136a456888f9d/verona.vim/verona-vim-dark-mode.png)
+
+## LICENCE
 
 See [LICENCE](LICENSE.md).
